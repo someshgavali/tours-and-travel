@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.707);
+}
+.logo {
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  transform: translateY(5px);
+}
+.toggleNavbar > .icon {
+  font-size: 25px;
+  color: rgb(21, 202, 226);
+}
+.toggleNavbar > .icon:hover {
+  color: aqua;
+}
+
+/* =========media Queries================= */
+
+@media screen and (max-width: 760px) {
+  .navBar {
+    position: absolute;
+    background-color: antiquewhite;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -500rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: 0.5s ease-in-out;
+  }
+  .activeNavbar {
+    top: 7rem;
+  }
+  .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .navItem {
+    padding: 0.5rem 0;
+  }
+  .navLink {
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .navLink:hover {
+    color: grey;
+    text-decoration: underline;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+  a {
+    font-weight: 600;
+    color: white;
+  }
+
+  .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: blue;
+  }
+  .closeNavbar:hover {
+    color: red;
+  }
+}
+/* =========media Queries======min-width(769) =========== */
+@media screen and (min-width: 769px) {
+  .closeNavbar,
+  .toggleNavbar {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .navLists {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+  }
+  .navLink {
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 0.45;
+  }
+  .btn {
+    margin-left: 1rem;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 10px;
+  }
+  a {
+    font-weight: 500;
+    color: white;
+  }
+}
+
+/* =========media Queries======min-width(960) =========== */
+
+@media screen and (min-width: 768px) {
+  .navItem {
+    padding: 0 0.7rem;
+  }
+  .btn {
+    margin-left: 1rem;
+
+    margin-bottom: 10px;
+  }
+}
+/* =========media Queries======min-width(1240) =========== */
+
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.5rem;
+  }
+}

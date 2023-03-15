@@ -1,0 +1,217 @@
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  /* z-index: 1; */
+}
+.videoDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+img {
+  height: 100;
+  object-fit: cover;
+}
+.videoDiv:hover {
+  content: "";
+  position: absolute;
+  background: rgba(10, 84, 107, 0.307);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+}
+
+.secContent {
+  width: 100%;
+  height: max-content;
+  padding: 2rem; /*initial*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 2rem;
+  z-index: 100;
+}
+.contactDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.text > small {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+.text > h2 {
+  color: white;
+  font-size: 1.8rem;
+}
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.inputDiv > input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid white;
+  outline: none;
+  background: white;
+  color: black;
+}
+.inputDiv > input:hover {
+  color: red;
+  background: transparent;
+  opacity: 0.5;
+}
+.inputDiv > .btn {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+.inputDiv > .btn:hover {
+  background: transparent;
+  border-radius: 3rem;
+  border: 1px solid white;
+}
+.btn > .icon {
+  color: black;
+  font-size: 18px;
+}
+.contactDiv {
+}
+.footerCard {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background: whitesmoke;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.footerIntro {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.logoDiv > .logo {
+  color: black;
+  font-weight: 600;
+}
+.logoDiv > .logo > .icon {
+  color: rgb(21, 152, 228);
+  font-size: 25px;
+  margin-bottom: 5px;
+  /* margin-right: 10px; */
+}
+.footerParagraph {
+  font-size: 13px;
+  color: black;
+}
+.footerSocials {
+  column-gap: 0.5rem;
+}
+.footerSocials > .icon {
+  color: black;
+  font-size: 20px;
+}
+.footerSocials > .icon:hover {
+  color: rgb(17, 187, 234);
+}
+.footerLinks {
+  flex-basis: 50%;
+  width: 100%;
+  flex-wrap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-left: 60px;
+}
+
+.linkGroup > .groupTitle {
+  display: block;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+.footerList {
+  font-size: 15px;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+.footerList > .icon {
+  color: grey;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.footerList:hover {
+  color: aqua;
+  transform: translateX(7px);
+  cursor: pointer;
+}
+.footerDiv {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(36, 165, 212);
+  padding: 0.5rem 2rem;
+}
+.footerDiv > p {
+  font-size: 10px;
+  color: white;
+}
+/* =========media Queries================= */
+@media screen and (min-width: 500px) {
+  .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+/* =========media Queries================= */
+@media screen and (min-width: 660px) {
+  .contactDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .inputDiv {
+    width: max-content;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  input {
+    width: 60%;
+  }
+  .btn {
+    width: max-content;
+  }
+}
